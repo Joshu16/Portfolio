@@ -401,10 +401,11 @@ rightArrow.addEventListener("click", () => {
 
 // Sección de Contacto mediante boton que lleve a whatsapp
 function contacto() {
-  const numero = "5491123456789"; // Reemplaza con tu número (código de país + número sin espacios)
-  const mensaje = "Hola, estoy interesado en trabajar contigo."; // Mensaje que se envía automáticamente
-  const url = `https://wa.me/${84839882}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
+  const correo = "joshua.saborio.contacto@gmail.com";
+  const asunto = "Interesado en trabajar contigo";
+  const cuerpo = "Hola Joshua, me gustaría contactarte para trabajar contigo.";
+  const mailtoLink = `mailto:${correo}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+  window.location.href = mailtoLink;
 }
 
 
