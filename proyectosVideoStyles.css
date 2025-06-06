@@ -1,0 +1,157 @@
+/*  =============================================================== *\
+
+Ajustes de Proyectos de Video
+
+/*  =============================================================== */
+
+html,body{
+    height: auto !important;
+    overflow: visible !important;
+}
+
+main {
+    height: auto !important;
+    overflow-x: hidden !important;
+
+}
+
+header nav a {
+    color: rgb(190, 190, 190);
+    text-decoration: none;
+}
+
+main header nav .nav-btn:nth-child(5) {
+    color: white;
+}
+
+/*  =============================================================== *\
+
+Grids de Webs
+
+/*  =============================================================== */
+
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    width: 90vw;
+    overflow-x: scroll;
+    z-index: 1;
+    border-radius: 20px;
+    align-self: center;
+  }
+  
+  .proyecto {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  
+    width: 30vw; /* El contenedor tiene un 40% del ancho de la pantalla */
+    height: auto; /* La altura se ajusta automáticamente */
+  }
+
+  #animacion .proyecto {
+    width: 20vw; /* El contenedor tiene un 40% del ancho de la pantalla */
+    height: auto; /* La altura se ajusta automáticamente */
+  }
+  
+  .proyecto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .proyecto video {
+    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+    height: auto; /* La altura se ajusta proporcionalmente al ancho */
+    aspect-ratio: 16/9; /* Mantiene la relación 16:9 */
+    object-fit: cover; /* Asegura que el video cubra el área sin perder proporciones */
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .proyecto .info {
+    padding: 1rem;
+    color: white;
+    border-radius: 0 0 20px 20px; /* Bordes redondeados solo abajo */
+    height: auto; /* La altura del texto se ajusta automáticamente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+  }
+  
+  .proyecto .info h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+  }
+  
+  .proyecto .info p {
+    font-size: 0.95rem;
+    color: #dcdcdc;
+    margin: 0;
+  }
+
+  .proyectos-grid::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  /* Falso ancho reducido visualmente */
+  .proyectos-grid::-webkit-scrollbar-track {
+    background: transparent;
+    position: relative;
+  }
+  
+  .proyectos-grid::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background-clip: content-box;
+    padding: 0 30vw; /* Esto visualmente acorta la barra */
+    box-sizing: border-box;
+  }
+  
+  .proyectos-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* === Diseño Responsive para Móviles === */
+@media (max-width: 768px) {
+  .proyectos-grid {
+    display: grid;
+    grid-template-columns: 1fr !important; /* Una sola columna */
+    overflow-x: hidden !important;
+
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .proyecto {
+    width: 100%; /* El contenedor ocupa el 100% del ancho de la pantalla */
+    height: auto; /* La altura se ajusta automáticamente */
+    margin: 0 auto; /* Centra el contenedor */
+  }
+
+  .proyecto iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .proyecto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .info {
+    padding: 0.5rem;
+  }
+}
+

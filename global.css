@@ -1,0 +1,566 @@
+/* ================================================================ *\
+ 
+  Estilos CSS
+ 
+\* ================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Poppins';
+    background: black;
+    color: white;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out forwards;
+
+
+}
+
+/* ================================================================ *\
+ 
+  Transiciones
+
+/* ================================================================ */
+
+
+
+/* Transiciones */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideOut {
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Clase para esconder con animación */
+.hide-intro {
+    animation: fadeSlideOut 2s ease-in forwards;
+}
+
+/* ================================================================ *\
+ 
+  Barra de Scroll
+ 
+\* ================================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(167, 167, 167, 0.5), rgba(255, 255, 255, 0.5));
+}
+
+
+/* ================================================================ *\
+ 
+  Fondo Burbujas
+ 
+\* ================================================================= */
+
+:root {
+    --color-bg1: rgb(108, 0, 162);
+    --color-bg2: rgb(0, 17, 82);
+    --color1: 18, 113, 255;
+    --color2: 221, 74, 255;
+    --color3: 100, 220, 255;
+    --color4: 200, 50, 50;
+    --color5: 180, 180, 50;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 80%;
+    --blending: hard-light;
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveVertical {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+
+    50% {
+        transform: translateX(50%) translateY(10%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+}
+
+.gradient-bg {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-blend-mode: darken;
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+.gradient-bg svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.gradients-container {
+    filter: blur(40px);
+    width: 100%;
+    height: 100%;
+}
+
+.g1,
+.g2,
+.g3,
+.g4,
+.g5 {
+
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    opacity: 1;
+}
+
+.g1 {
+    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+    animation: moveVertical 30s ease infinite;
+}
+
+.g2 {
+    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+    transform-origin: calc(50% - 400px);
+    animation: moveInCircle 20s reverse infinite;
+}
+
+.g3 {
+    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+    top: calc(50% - var(--circle-size) / 2 + 200px);
+    left: calc(50% - var(--circle-size) / 2 - 500px);
+    transform-origin: calc(50% + 400px);
+    animation: moveInCircle 40s linear infinite;
+}
+
+.g4 {
+    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+    transform-origin: calc(50% - 200px);
+    animation: moveHorizontal 40s ease infinite;
+    opacity: 0.7;
+}
+
+.g5 {
+    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+    width: calc(var(--circle-size) * 2);
+    height: calc(var(--circle-size) * 2);
+    top: calc(50% - var(--circle-size));
+    left: calc(50% - var(--circle-size));
+    transform-origin: calc(50% - 800px) calc(50% + 200px);
+    animation: moveInCircle 20s ease infinite;
+}
+
+.interactive {
+    position: fixed;
+    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: 50vw;
+    height: 50vw;
+    opacity: 0.7;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+
+
+}
+
+/* ================================================================ *\
+ 
+  Main
+ 
+\* ================================================================= */
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    background: rgba(0, 0, 0, 0.712);
+    border: .1px solid rgb(68, 68, 68);
+    border-radius: 35px;
+
+    margin: 3vw;
+    height: 90%;
+}
+
+/* ================================================================ *\
+ 
+  Main: header
+ 
+\* ================================================================= */
+
+main header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+main header nav {
+    display: flex;
+
+    background: rgba(0, 0, 0, 0.212);
+    border: .1px solid rgb(68, 68, 68);
+    border-radius: 0 35px 0;
+    padding-inline: 40px;
+    align-items: center;
+    gap: 2.5vw;
+
+    height: 10vh;
+}
+
+main header nav .nav-btn {
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+    font-size: 1.3rem;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all .25s ease-in;
+}
+
+main header nav .nav-btn:hover {
+    scale: 1.1;
+    color: rgb(255, 255, 255);
+}
+
+.border {
+    border-top: 6px solid rgba(255, 255, 255, 0.726);
+    border-radius: 10px;
+
+    width: 50px;
+
+    margin-top: 1vh;
+    margin-bottom: 1.3vh;
+}
+
+/* ================================================================ *\
+ 
+  User
+ 
+\* ================================================================= */
+
+.user {
+    display: flex;
+    flex-direction: column;
+
+    justify-items: center;
+    align-self: start;
+    margin-top: 2vh;
+    padding: 1vw 3vw;
+
+}
+
+.user h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.user h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ================================================================ *\
+ 
+  Sections
+ 
+\* ================================================================= */
+
+.sections {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ================================================================ *\
+ 
+  Main: Cards
+ 
+\* ================================================================= */
+
+.info div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-block: 10px;
+    flex-wrap: wrap;
+}
+
+.info div p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    background: rgba(128, 128, 128, 0.397);
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 1px solid white;
+
+}
+
+.info div img {
+    height: 20px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2vh;
+}
+
+#subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1vh;
+}
+
+#subtitle img{
+    height: 10vh;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+#subtitle img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+
+
+/* Botón hamburguesa - oculto por defecto */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Sidebar móvil - oculto por defecto */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+/* Botón cerrar del sidebar */
+#menu-close {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* ===== ESTILOS PARA EL MENÚ MÓVIL ===== */
+
+/* Botón hamburguesa - oculto por defecto */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+/* Sidebar móvil - oculto por defecto */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+/* Mostrar sidebar cuando está activo */
+.mobile-sidebar.active {
+    left: 0;
+}
+
+/* Botón cerrar del sidebar */
+.mobile-menu-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+/* Botones del menú móvil */
+.mobile-nav-btn {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+    /* Ocultar nav de desktop en móvil */
+    .desktop-nav {
+        display: none;
+    }
+    
+    /* Mostrar botón hamburguesa */
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-sidebar {
+        width: 80%;
+    }
+}

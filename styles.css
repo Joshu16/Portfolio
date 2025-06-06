@@ -1,0 +1,99 @@
+/* ================================================================ *\
+ 
+  INTRO
+ 
+\* ================================================================= */
+
+.sparkle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 1;
+    box-shadow: 0 0 6px 3px white;
+    animation: fall 1s ease-out forwards;
+    z-index: 999;
+}
+
+.intro-screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-blend-mode: darken;
+    background: linear-gradient(#3d5a80 , rgb(7, 0, 46));
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    text-align: center;
+    cursor: pointer;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    color: #cccccc;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+    animation-delay: 0.6s;
+    text-align: center;
+}
+
+.subtitulo .nombre {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+.intro-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-buttons a,
+.intro-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    width: 11vw;
+    height: 3rem;
+    margin: 1rem;
+    padding-inline: 20px;
+    background: #20202062;
+    color: #fff;
+    border: 0.5px solid white;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s, background 0.3s;
+}
+
+#Contact {
+    width: auto;
+    max-width: none;
+}
+
+.intro-buttons a:hover,
+.intro-buttons button:hover {
+    background: #98c1d9 ;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .intro-buttons a,
+    .intro-buttons button {
+        width: 30vw;
+        font-size: 1rem;
+    }
+}

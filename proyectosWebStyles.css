@@ -1,0 +1,285 @@
+/*  =============================================================== *\
+
+Ajustes de Web
+
+/*  =============================================================== */
+
+html,body{
+    height: auto !important;
+    overflow: visible !important;
+}
+
+main {
+    height: auto !important;
+}
+
+header nav a {
+    color: rgb(190, 190, 190);
+    text-decoration: none;
+}
+
+main header nav .nav-btn:nth-child(2) {
+    color: white;
+}
+
+/*  =============================================================== *\
+
+Grids de Webs
+
+/*  =============================================================== */
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 2rem;
+    max-width: 100vw;
+    margin: auto;
+    z-index: 1;
+  }
+  
+  .proyecto {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .proyecto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .proyecto img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .proyecto .info {
+    padding: 1.2rem;
+    color: white;
+  }
+  
+  .proyecto .info h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+  }
+  
+  .proyecto .info p {
+    font-size: 0.95rem;
+    color: #dcdcdc;
+    margin: 0;
+  }
+  
+/* =============================================================== *\
+
+Modales
+
+/* =============================================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding: 5vh 5vw;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-content {
+    background: #2b2a2a;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  
+  .close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .modal-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #ffffff11;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .modal-btn:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* =============================================================== *\
+  MEDIA QUERIES - RESPONSIVE DESIGN
+\* =============================================================== */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .proyecto img {
+        height: 200px;
+    }
+    
+    .proyecto .info {
+        padding: 1rem;
+    }
+    
+    .proyecto .info h2 {
+        font-size: 1.2rem;
+    }
+    
+    .proyecto .info p {
+        font-size: 0.9rem;
+    }
+    
+    .modal-content {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+    
+    .close {
+        top: 1.5rem;
+        right: 2rem;
+        font-size: 1.8rem;
+    }
+}
+
+/* Móviles grandes (576px - 767px) */
+@media (max-width: 767px) {
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 1.2rem;
+    }
+    
+    .proyecto img {
+        height: 180px;
+    }
+    
+    .proyecto .info div p {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+    
+    .proyecto .info div p img {
+        height: 12px;
+    }
+    
+    .modal-content {
+        padding: 1.2rem;
+    }
+    
+    .close {
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Móviles pequeños (hasta 575px) */
+@media (max-width: 575px) {
+    .proyectos-grid {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .proyecto img {
+        height: 150px;
+    }
+    
+    .proyecto .info h2 {
+        font-size: 1.1rem;
+    }
+    
+    .proyecto .info p {
+        font-size: 0.85rem;
+    }
+    
+    .proyecto .info div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .proyecto .info div p {
+        margin: 0.2rem;
+        font-size: 0.7rem;
+    }
+    
+    .modal-content {
+        padding: 1rem;
+    }
+    
+    .modal-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 400px) {
+    .proyecto img {
+        height: 130px;
+    }
+    
+    .proyecto .info {
+        padding: 0.8rem;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .modal-content p {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,495 @@
+/* Portafolio */
+.project-section {
+    display: none;
+    padding: 4rem;
+    background-color: #121212;
+    color: white;
+    animation: fadeIn 2s ease forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+    animation-delay: 0.4s;
+}
+
+/* Clase para esconder con animación */
+.hide-intro {
+    animation: fadeSlideOut 2s ease-in forwards;
+}
+
+/* ================================================================ *\
+ 
+  Section: Header
+
+/*  =============================================================== */
+
+main header {
+    z-index: 1000;
+}
+
+/* ================================================================ *\
+ 
+  Section: Portfolio
+ 
+\* ================================================================= */
+
+/* Contenedor del carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -20vh;
+}
+
+/* Botones de flecha */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Elementos del carrusel */
+.carousel-item {
+    position: absolute;
+    display: flex;
+    background: rgba(0, 0, 0, 0.849);
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    border: .1px solid rgb(68, 68, 68);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 20px;
+    padding: 4vh;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transform-origin: center;
+    cursor: pointer;
+}
+
+.carousel-item.active:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    overflow: visible;
+}
+
+.carousel-item span h1{
+    font-size: 6vh;
+    margin-bottom: 1vh;
+    color: white;
+    text-align: center;
+}
+
+.carousel-item p {
+    font-size: 3.5vh;
+    margin-top: 1vh;
+    color: white;
+    text-align: center;
+}
+
+.carousel-item span div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.carousel-item span div p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.295);
+}
+.carousel-item span div p img {
+    width: auto;
+    height: 20px;
+    object-fit: cover;
+}
+
+/* Categorías específicas */
+.apps {
+    width: 20vw;
+    height: 70vh;
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url(https://www.talent-republic.tv/wp-content/uploads/2021/01/maxresdefault-1024x576.jpg);
+}
+
+.apps.active {
+    background: rgba(0, 0, 0, 0.75);
+    background-image: url(https://www.talent-republic.tv/wp-content/uploads/2021/01/maxresdefault-1024x576.jpg);
+}
+
+.web {
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url(https://www.seas.es/blog/wp-content/uploads/2024/09/Programacion-web.jpg);
+}
+
+.web.active {
+    background: rgba(0, 0, 0, 0.75);
+    background-image: url(https://www.seas.es/blog/wp-content/uploads/2024/09/Programacion-web.jpg);
+}
+
+.console {
+    width: 40vw;
+    height: 50vh;
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url(https://concepto.de/wp-content/uploads/2020/08/Programacion-informatica-scaled-e1724960033513.jpg);
+}
+
+.console.active {
+    background: rgba(0, 0, 0, 0.75);
+    background-image: url(https://concepto.de/wp-content/uploads/2020/08/Programacion-informatica-scaled-e1724960033513.jpg);
+}
+
+.video {
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url(https://www.usastreams.com/wp-content/uploads/2021/06/Adobe-Premiere-Pro-Productions-interfaz-usuario.jpg);
+}
+
+.video.active {
+    background: rgba(0, 0, 0, 0.75);
+    background-image: url(https://www.usastreams.com/wp-content/uploads/2021/06/Adobe-Premiere-Pro-Productions-interfaz-usuario.jpg);
+}
+
+.design {
+    width: 40vw;
+    height: 50vh;
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url(https://i0.wp.com/universidadmundial.edu.mx/wp-content/uploads/2020/02/diseno-grafico-dig-portada.jpg?fit=740%2C637&ssl=1);
+}
+
+.design.active {
+    background: rgba(0, 0, 0, 0.75);
+    background-image: url(https://i0.wp.com/universidadmundial.edu.mx/wp-content/uploads/2020/02/diseno-grafico-dig-portada.jpg?fit=740%2C637&ssl=1);
+}
+
+/* Elemento principal (en el centro) */
+.carousel-item.active {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+/* Elemento anterior (a la izquierda) */
+.carousel-item.prev {
+    transform: translateX(-25vw) scale(0.8);
+    opacity: 0.5;
+    z-index: 2;
+}
+
+/* Elemento siguiente (a la derecha) */
+.carousel-item.next {
+    transform: translateX(+25vw) scale(0.8);
+    opacity: 0.5;
+    z-index: 2;
+}
+
+/* ================================================================ *\
+ 
+  Main: Portfolio
+ 
+\* ================================================================= */
+
+#Portfolio {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+#Portfolio.active {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5vh;
+}
+
+/* ================================================================ *\
+ 
+  ANIMACIONES (final del archivo)
+ 
+\* ================================================================= */
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(50px) scale(0.3);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ================================================================ *\
+ 
+  MEDIA QUERIES - RESPONSIVE DESIGN
+ 
+\* ================================================================= */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .carousel {
+        height: 80vh;
+        margin-top: -20vh;
+    }
+    
+    .carousel-item {
+        width: 60vw;
+        height: 50vh;
+        padding: 3vh;
+    }
+    
+    .carousel-item span h1 {
+        font-size: 4vh;
+    }
+    
+    .carousel-item p {
+        font-size: 2.5vh;
+    }
+    
+    .carousel-item span div p {
+        font-size: 2vh;
+    }
+    
+    .carousel-item span div p img {
+        height: 15px;
+    }
+    
+    /* Ajustar posiciones para tablets */
+    .carousel-item.prev {
+        transform: translateX(-30vw) scale(0.8);
+    }
+    
+    .carousel-item.next {
+        transform: translateX(+30vw) scale(0.8);
+    }
+    
+    /* Elementos específicos */
+    .apps {
+        width: 30vw;
+        height: 60vh;
+    }
+    
+    .design, .console {
+        width: 50vw;
+        height: 50vh;
+    }
+    
+    /* Botones intro */
+    .intro-buttons a, 
+    .intro-buttons button {
+        min-width: 20vw;
+        max-width: 20vw;
+        font-size: 1.1rem;
+    }
+}
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .carousel {
+        height: 70vh;
+        margin-top: 0;
+    }
+    
+    .carousel-item {
+        width: 80vw;
+        height: 50vh;
+        padding: 2vh;
+    }
+    
+    .carousel-item span h1 {
+        font-size: 3.5vh;
+        margin-bottom: 0.5vh;
+    }
+    
+    .carousel-item p {
+        font-size: 2vh;
+        margin-top: 0.5vh;
+    }
+    
+    .carousel-item span div {
+        gap: 0.5vh;
+        margin-top: 5px;
+    }
+    
+    .carousel-item span div p {
+        font-size: 1.5vh;
+        padding: 3px;
+    }
+    
+    .carousel-item span div p img {
+        height: 12px;
+    }
+    
+    /* Ajustar posiciones para móviles */
+    .carousel-item.prev {
+        transform: translateX(-40vw) scale(0.7);
+        opacity: 0.3;
+    }
+    
+    .carousel-item.next {
+        transform: translateX(+40vw) scale(0.7);
+        opacity: 0.3;
+    }
+    
+    /* Elementos específicos */
+    .apps, .design, .console {
+        width: 80vw;
+        height: 50vh;
+    }
+    
+    /* Botones de flecha más grandes para móviles */
+    .carousel-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
+    /* Intro screen adjustments */
+    .subtitulo .nombre {
+        font-size: 3rem;
+    }
+    
+    .intro-buttons {
+        flex-direction: column;
+    }
+    
+    .intro-buttons a, 
+    .intro-buttons button {
+        min-width: 60vw;
+        max-width: 60vw;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+    
+    /* Project section padding */
+    .project-section {
+        padding: 2rem;
+    }
+}
+
+/* Pequeños móviles (hasta 480px) */
+@media (max-width: 480px) {
+
+    .carousel {
+        height: 80vh;
+        margin-top: -12vh;
+    }
+
+    .carousel-item {
+        width: 60vw;
+        height: 45vh;
+    }
+    
+    .carousel-item span h1 {
+        font-size: 3vh;
+    }
+    
+    .carousel-item p {
+        font-size: 1.8vh;
+    }
+    
+    
+    
+    /* Ajustar aún más las posiciones para pantallas muy pequeñas */
+    .carousel-item.prev {
+        transform: translateX(-45vw) scale(0.6);
+    }
+    
+    .carousel-item.next {
+        transform: translateX(+45vw) scale(0.6);
+    }
+    
+    /* Intro screen adjustments */
+    .subtitulo .nombre {
+        font-size: 2.5rem;
+    }
+}

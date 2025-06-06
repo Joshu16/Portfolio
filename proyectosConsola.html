@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="proyectosConsolaStyles.css">
+    <link rel="stylesheet" href="global.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <link rel="icon" href="https://static-00.iconduck.com/assets.00/adobe-portfolio-icon-2048x2048-9mr3hke4.png"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Proyectos de Consola | Joshua Saborío </title>
+</head>
+
+<html lang="eng">
+
+<body>
+    <div class="gradient-bg">
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+
+    <main class="fade-in">
+        <header>
+            <div class="user">
+                <h1>Mis Proyectos de Programación en Consola</h1>
+                <h3>Conoce todos mis tipos de proyectos en consola y cómo los realicé.</h3>
+                <div class="border"></div>
+            </div>
+
+            <!-- Nav para desktop -->
+            <nav class="desktop-nav">
+                <a class="nav-btn" href="index.html">Inicio</a>
+                <a class="nav-btn" href="proyectosWeb.html">Webs</a>
+                <a class="nav-btn" href="proyectosMoviles.html">Apps</a>
+                <a class="nav-btn" href="proyectosConsola.html">Consola</a>
+                <a class="nav-btn" href="proyectosVideo.html">Videos</a>
+                <a class="nav-btn" href="proyectosDesign.html">Diseño</a>
+            </nav>
+
+            <!-- Botón hamburguesa para móvil -->
+            <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Abrir menú">
+                &#9776;
+            </button>
+
+            <!-- Menú móvil (sidebar) -->
+            <nav id="mobileSidebar" class="mobile-sidebar">
+                <button id="mobileMenuClose" class="mobile-menu-close" aria-label="Cerrar menú">&times;</button>
+                <a class="mobile-nav-btn" href="index.html">Inicio</a>
+                <a class="mobile-nav-btn" href="proyectosWeb.html">Webs</a>
+                <a class="mobile-nav-btn" href="proyectosMoviles.html">Apps</a>
+                <a class="mobile-nav-btn" href="proyectosConsola.html">Consola</a>
+                <a class="mobile-nav-btn" href="proyectosVideo.html">Videos</a>
+                <a class="mobile-nav-btn" href="proyectosDesign.html">Diseño</a>
+            </nav>
+        </header>
+
+
+        <h1 id="title">Python</h1>
+
+        <section class="proyectos-grid">
+            <div class="proyecto" onclick="abrirModal(1)">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGS-yN-pdDpnJtz1bu44w0KJVvYSgQ_fNZWw&s"
+                    alt="Proyecto 1">
+                <div class="info">
+                    <h2>Juegos en Consola de Python</h2>
+                    <p>
+                        Juegos de consola hechos en Python, como piedra, papel o tijeras, la ruleta Rusa, Carrera de
+                        caballos, etc.
+                    </p>
+                    <div>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/800px-Python.svg.png">Python
+                        </p>
+                        <p>os</p>
+                        <p>time</p>
+                        <p>random</p>
+                        <p>keyboard</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="abrirModal(2)">
+                <img style="object-position: top;"
+                    src="https://img.freepik.com/vector-gratis/bonito-restaurante-dibujado-mano_23-2147567264.jpg"
+                    alt="Proyecto 1">
+                <div class="info">
+                    <h2>Ordenar Pedido de Restaurante</h2>
+                    <p>
+                        Este proyecto permite a los usuarios realizar pedidos en un restaurante a través de un menú
+                        interactivo en la consola.
+                    </p>
+                    <div>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/800px-Python.svg.png">Python
+                        </p>
+                        <p>os</p>
+                        <p>time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="downloadFile()">
+
+                <img style="object-position: top;"
+                    src="https://shop.creceonline.mx/cdn/shop/products/4_d0031769-76bf-40ac-bff8-54f2efcc60a9_800x.png?v=1681132619"
+                    alt="Proyecto 1">
+                <div class="info">
+                    <h2>Comparar Numeros</h2>
+                    <p>
+                        Este proyecto permite a los usuarios comparar tres números enteros y determinar cuál es el mayor
+                        y
+                        cuál es el menor, siempre procurando que sean de dos dígitos.
+                    </p>
+                    <div>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/800px-Python.svg.png">Python
+                        </p>
+                        <p>os</p>
+                        <p>time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h1 id="title">JavaScript</h1>
+        <h3 id="subtitle">Curso Code Academy JavaScript <img
+                src="https://yt3.googleusercontent.com/OoIfYjblzMBPeV3kAHvaOYNgQmvJeVUB9q14pRuAhawNFRppUstvr_inYiBzdVB6EuWhK4li=s900-c-k-c0x00ffffff-no-rj">
+        </h3>
+
+        <section class="proyectos-grid">
+            <div class="proyecto" onclick="window.open('https://playcode.io/2399162', '_blank');">
+                <img src="https://play-lh.googleusercontent.com/iFjjou1W-9cZyz1z9PRrJcbRSAWoEJ1vNnlv_Z3ghVF8HMVn4cQX2scIJCt1Vb6ZKuY"
+                    alt="Proyecto 1">
+                <div class="info">
+                    <h2>Bola Ocho Adivina</h2>
+                    <p>
+                        Este es un proyecto de consola que simula una bola ocho adivina, donde el usuario puede hacerle
+                        preguntas y la bola ocho le dará una respuesta aleatoria.
+                    </p>
+                    <div>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="window.open('https://playcode.io/2399167', '_blank');">
+                <img src="https://i.imgflip.com/9f27fe.png" alt="Proyecto 1">
+                <div class="info">
+                    <h2>Años Humanos a Perros</h2>
+                    <p>
+                        Este es un proyecto de consola que convierte años humanos a años de perros, utilizando una
+                        fórmula simple para calcular la edad del perro.
+                    </p>
+                    <div>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="window.open('https://playcode.io/2402610', '_blank');">
+                <img src="https://img.datacentermarket.es/wp-content/uploads/2024/05/07125627/Temperatura-de-los-Data-Center-2.jpeg"
+                    alt="Proyecto 1">
+                <div class="info">
+                    <h2>Convertir Kelvin a Otras Medidas de Temperatura</h2>
+                    <p>
+                        Este es un proyecto de consola que convierte Kelvin a otras medidas de temperatura, como Celsius
+                        y Fahrenheit, utilizando fórmulas matemáticas simples.
+                    </p>
+                    <div>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="window.open('https://playcode.io/2402621', '_blank');">
+                <img src="https://media.istockphoto.com/id/171267224/es/foto/atleta-mano-sosteniendo-un-ramo-de-medallas-de-oro-cielo-azul.jpg?s=612x612&w=0&k=20&c=9K3MrhE2TkqtgrBBZ5gWhMLltYeVpntHf42k0plPqMI="
+                    alt="Proyecto 1">
+                <div class="info">
+                    <h2>Medalla Según Posición y Verificador de Edad Legal </h2>
+                    <p>
+                        Este es un proyecto de consola que verifica la edad legal de una persona y asigna una medalla
+                        según su posición en una carrera, utilizando switch, cases, etc.
+                    </p>
+                    <div>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="window.open('https://playcode.io/2402627', '_blank');">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/US_Navy_100519-N-7367K-001_A_Sailor_and_a_Soldier_based_in_southern_Mississippi_sprint_to_the_finish_line_during_the_Run_for_Relief_5K_Challenge.jpg/330px-US_Navy_100519-N-7367K-001_A_Sailor_and_a_Soldier_based_in_southern_Mississippi_sprint_to_the_finish_line_during_the_Run_for_Relief_5K_Challenge.jpg"
+                    alt="Proyecto 1">
+                <div class="info">
+                    <h2>
+                        Asignación de Número de Carrera Según Edad y Hora
+                    </h2>
+                    <p>
+                        Este proyecto asigna la hora y número de carrera según la edad y si el corredor se registró
+                        temprano. Usa JavaScript, condiciones y generación aleatoria de números.
+                    </p>
+                    <div>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="window.open('https://playcode.io/2402630', '_blank');">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT77QIdDWV98ufIjCIDB6nn0B0-ml7Vt1rxrQ&s"
+                    alt="Proyecto 1">
+                <div class="info">
+                    <h2>
+                        Necesita Agua la Planta
+                    </h2>
+                    <p>
+                        Este proyecto pide un día y dice si la planta necesita agua ese día. Solo necesita agua los
+                        miércoles. Usa una función con operador ternario para decidir.
+                    </p>
+                    <div>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h1 id="title">ThinkerCad y C++</h1>
+
+        <div class="carousel-container">
+            <button class="carousel-btn prev custom-carousel-prev">&#10094;</button>
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track custom-carousel-track">
+                    <img src="Console(1).png" alt="Proyecto 1" class="carousel-image" />
+                    <img src="Console(2).png" alt="Proyecto 2" class="carousel-image" />
+                    <img src="Console(3).png" alt="Proyecto 3" class="carousel-image" />
+                    <img src="Console(4).png" alt="Proyecto 4" class="carousel-image" />
+                    <img src="Console(5).png" alt="Proyecto 5" class="carousel-image" />
+                </div>
+            </div>
+            <button class="carousel-btn next custom-carousel-next">&#10095;</button>
+        </div>
+
+        <div class="custom-lightbox" style="display:none;">
+            <span class="custom-lightbox-close"
+                style="cursor:pointer; font-size: 3rem; position:absolute; top:20px; right:30px; color:white;">&times;</span>
+            <img src="" alt="Imagen ampliada"
+                style="max-width:90vw; max-height:90vh; display:block; margin: 70px auto 30px auto; box-shadow: 0 0 20px rgba(0,0,0,0.8);" />
+        </div>
+    </main>
+
+    <!-- Modal Proyecto -->
+    <div class="modal" id="modal-1" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(1)" style="cursor:pointer;">&times;</span>
+            <h2>MacroFIT</h2>
+            <iframe src="https://www.youtube.com/embed/liW-hzAOTAM
+
+" frameborder="0" width="100%" height="500" style="aspect-ratio: 9/16;" allowfullscreen></iframe>
+            <p>Este proyecto simula juegos en consola usando Python y la librería random.</p>
+            <a class="modal-btn" target="_blank" href="Juegos.py" download="Juegos.py">Descargar archivo .py</a>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-2" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(2)" style="cursor:pointer;">&times;</span>
+            <h2>MacroFIT</h2>
+            <iframe src="https://www.youtube.com/embed/KBt19dR5t2s
+
+" frameborder="0" width="100%" height="500" style="aspect-ratio: 9/16;" allowfullscreen></iframe>
+            <p>Este proyecto simula juegos en consola usando Python y la librería random.</p>
+            <a class="modal-btn" target="_blank" href="Juegos.py" download="Juegos.py">Descargar archivo .py</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="scriptModals.js"></script>
+    <script src="scriptCarrusel.js"></script>
+    <script>
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = 'Restaurante.py';  // Cambia esta ruta por la URL o ruta real del archivo
+            link.download = 'Restaurante.py';       // Nombre con el que se descargará el archivo
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="proyectos1Styles.css">
+    <link rel="stylesheet" href="global.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <link rel="icon" href="https://static-00.iconduck.com/assets.00/adobe-portfolio-icon-2048x2048-9mr3hke4.png"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Joshua Saborío | Portfolio </title>
+</head>
+
+<html lang="eng">
+
+<body>
+    <div class="gradient-bg">
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+
+    <main class="fade-in">
+        <header>
+            <div class="user">
+                <h1>Joshua Saborío Monge</h1>
+                <h3>Desarrollador de Software</h3>
+                <div class="border"></div>
+            </div>
+
+            <!-- Nav para desktop -->
+            <nav class="desktop-nav">
+                <button class="nav-btn" onclick="window.location.href='index.html';">Inicio</button>
+                <button class="nav-btn" onclick="window.location.href='curriculumEspa.html';">Curriculum</button>
+                <button class="nav-btn" onclick="window.location.href='contacto.html';">Contacto</button>
+            </nav>
+
+            <!-- Botón hamburguesa para móvil -->
+            <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Abrir menú">
+                &#9776;
+            </button>
+
+            <!-- Menú móvil (sidebar) -->
+            <nav id="mobileSidebar" class="mobile-sidebar">
+                <button id="mobileMenuClose" class="mobile-menu-close" aria-label="Cerrar menú">&times;</button>
+                <button class="mobile-nav-btn" onclick="window.location.href='index.html';">Inicio</button>
+                <button class="mobile-nav-btn" onclick="window.location.href='curriculumEspa.html';">Curriculum</button>
+                <button class="mobile-nav-btn" onclick="window.location.href='contacto.html';">Contacto</button>
+            </nav>
+        </header>
+
+        <div class="sections">
+            <section class="section" id="portfolio">
+
+                <div class="carousel">
+                    <button class="carousel-arrow left-arrow">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div onclick="window.location.href='proyectosWeb.html'" class="carousel-item web">
+                        <span>
+                            <h1>Desarrollo Web</h1>
+                            <p>Desarrollo web con <strong>HTML, CSS</strong> y conocimientos de
+                                <strong>JavaSript y Node.js con MySQL</strong>. Herramientas como <strong>WIX, WordPress
+                                    y
+                                    Shopify.</strong>
+                            </p>
+                            <div>
+                                <p><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png">HTML</p>
+                                <p><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg">CSS</p>
+                                <p><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                                </p>
+                                <p><img
+                                        src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png">Node.js
+                                </p>
+                                <p><img src="https://seeklogo.com/images/M/mysql-logo-B4943FE6DD-seeklogo.com.png">mySQL
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+                    <div onclick="window.location.href='proyectosMoviles.html'" class="carousel-item apps">
+                        <span>
+                            <h1>Apps</h1>
+                            <p>Desarrollo de aplicaciones móviles en <strong>Kotlin</strong> y conocimiento de
+                                <strong>React Native</strong>.
+                            </p>
+                            <div>
+                                <p><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kotlin_Icon.svg/1200px-Kotlin_Icon.svg.png">Kotlin
+                                </p>
+                                <p><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/2560px-SQLite370.svg.png">SQLite
+                                </p>
+                                <p><img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyvxiKZRQnt32woh9rIjdG1y-9NJiaXkVX6A&s">Swift
+                                </p>
+                                <p><img
+                                        src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png">React
+                                    Native</p>
+                            </div>
+                        </span>
+                    </div>
+                    <div onclick="window.location.href='proyectosConsola.html'" class="carousel-item console">
+                        <span>
+                            <h1>Programación en Consola</h1>
+                            <p>Desarrollo de aplicaciones de consola en <strong>C++</strong>,
+                                <strong>JavaScript</strong> y
+                                <strong>Python</strong>.
+                            </p>
+                            <div>
+                                <p><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/800px-Python.svg.png">Python
+                                </p>
+
+                                <p><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                                </p>
+                                <p><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png">C++
+                                </p>
+                                <p><img
+                                        src="https://static.wixstatic.com/media/517642_2fcffbf9b8b14a5fade496e388d89915~mv2.png/v1/fill/w_358,h_358,al_c,lg_1,q_85,enc_avif,quality_auto/517642_2fcffbf9b8b14a5fade496e388d89915~mv2.png">ThinkerCAD
+                                </p>
+
+                            </div>
+                        </span>
+                    </div>
+                    <div onclick="window.location.href='proyectosVideo.html'" class="carousel-item video">
+                        <span>
+                            <h1>Edición de Video</h1>
+                            <p>Edición de video en plataformas como Premiere Pro, Filmora X, CapCut, IMovie y
+                                Canva. <br> Estilo cinemático, publicitario, horizontal y vertical.</p>
+                            <div>
+                                <p><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/1200px-Adobe_Premiere_Pro_CC_icon.svg.png">Premiere
+                                    Pro</p>
+                                <p><img
+                                        src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxjeeMeR_QZ3ewKpujC90DLPQpDp7f301Zy_c6TQKI.pY986m6SNTeua_eQ.hiqYS69IIXZAX2Bhi3eF8JZlMzoc-&format=source">Filmora
+                                    X</p>
+                                <p><img
+                                        src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBaQDG.nPeYqpMXSUQbV6ZbD91yFvl6MED0DbXCSCDM65WBJvUSoBpeGJjpagIBQmkSCbu4O9x1yPwyrZSBVMyAg-&format=source">CapCut
+                                </p>
+                                <p><img
+                                        src="https://help.apple.com/assets/670056543786E8A0E8044C94/670056583786E8A0E8044C9A/es_419/7ed8a31ab3b640ddcc899151ffc16c9f.png">IMovie
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+                    <div onclick="window.location.href='proyectosDesign.html'" class="carousel-item design">
+                        <span>
+                            <h1>Diseño</h1>
+                            <p>Diseños internos para empresas como concursos o metas de ventas así como diseño de
+                                interfaces.</p>
+                            <div>
+                                <p><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg">Figma
+                                </p>
+                                <p><img
+                                        src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxo4K81Ei7WzcnqEk8W.MgwZYL9v6HqLuMfZlIwt20gJkLnz8LlzJLalI2ZDsdWnc5u8_qMqCT1QDNkpL7Gsf9m4-&format=source">Canva
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+                    <button class="carousel-arrow right-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

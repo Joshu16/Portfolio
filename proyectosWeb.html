@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="proyectosWebStyles.css">
+    <link rel="stylesheet" href="global.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <link rel="icon" href="https://static-00.iconduck.com/assets.00/adobe-portfolio-icon-2048x2048-9mr3hke4.png"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Proyectos Web | Joshua Saborío </title>
+</head>
+
+<html lang="eng">
+
+<body>
+    <div class="gradient-bg">
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+
+    <main class="fade-in">
+        <header>
+            <div class="user">
+                <h1>Proyectos Web</h1>
+                <h3>Conoce todos mis tipos de proyectos web y cómo los realicé.</h3>
+                <div class="border"></div>
+            </div>
+
+            <!-- Nav para desktop -->
+            <nav class="desktop-nav">
+                <a class="nav-btn" href="index.html">Inicio</a>
+                <a class="nav-btn" href="proyectosWeb.html">Webs</a>
+                <a class="nav-btn" href="proyectosMoviles.html">Apps</a>
+                <a class="nav-btn" href="proyectosConsola.html">Consola</a>
+                <a class="nav-btn" href="proyectosVideo.html">Videos</a>
+                <a class="nav-btn" href="proyectosDesign.html">Diseño</a>
+            </nav>
+
+            <!-- Botón hamburguesa para móvil -->
+            <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Abrir menú">
+                &#9776;
+            </button>
+
+            <!-- Menú móvil (sidebar) -->
+            <nav id="mobileSidebar" class="mobile-sidebar">
+                <button id="mobileMenuClose" class="mobile-menu-close" aria-label="Cerrar menú">&times;</button>
+                <a class="mobile-nav-btn" href="index.html">Inicio</a>
+                <a class="mobile-nav-btn" href="proyectosWeb.html">Webs</a>
+                <a class="mobile-nav-btn" href="proyectosMoviles.html">Apps</a>
+                <a class="mobile-nav-btn" href="proyectosConsola.html">Consola</a>
+                <a class="mobile-nav-btn" href="proyectosVideo.html">Videos</a>
+                <a class="mobile-nav-btn" href="proyectosDesign.html">Diseño</a>
+            </nav>
+        </header>
+
+        <section class="proyectos-grid">
+            <div class="proyecto" onclick="abrirModal(1)">
+                <img src="WebMacroFIT.png" alt="Proyecto 1">
+                <div class="info">
+                    <h2>MacroFIT</h2>
+                    <p>Página web sobre deporte, salud y nutrición.</p>
+                    <div>
+                        <p><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png">HTML</p>
+                        <p><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg">CSS</p>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                        <p>LocalStorage</p>
+                    </div>
+                    <h4>En Otra versión</h4>
+                    <div>
+                        <p><img
+                                src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png">Node.js
+                        </p>
+                        <p><img src="https://seeklogo.com/images/M/mysql-logo-B4943FE6DD-seeklogo.com.png">mySQL</p>
+                        <p>Hosteo de mySQL</p>
+                    </div>
+                </div>
+            </div>
+             <div class="proyecto" onclick="abrirModal(8)">
+                <img src="WebMessi.png" style="object-position: left;" alt="Proyecto 1">
+                <div class="info">
+                    <h2>Biografía de Lionel Messi</h2>
+                    <p>
+
+                    </p>
+                    <div>
+                        <p><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png">HTML</p>
+                        <p><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg">CSS</p>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="abrirModal(2)">
+                <img src="WebTicTac.png" alt="Proyecto 2">
+                <div class="info">
+                    <h2>Tic Tac Toe Web</h2>
+                    <p>
+                        Juego clásico de Tres en Línea con diseño retro, tipografía pixelada y animaciones. Incluye
+                        detección de ganador, empates y botón de reinicio.
+                    </p>
+                    <div>
+                        <p><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png">HTML</p>
+                        <p><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg">CSS</p>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="abrirModal(3)">
+                <img src="WebENG.png" alt="Proyecto 3">
+                <div class="info">
+                    <h2>Proyecto de Inglés Web</h2>
+                    <p>
+                        Museo de deporte implementando herramientas de desarrollo web para su exposición.
+                    </p>
+                    <div>
+                        <p><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png">HTML</p>
+                        <p><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg">CSS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="abrirModal(4)">
+                <img src="WebPau.png" alt="Proyecto 4">
+                <div class="info">
+                    <h2>Colaboración en Desarrollo de Portfolio</h2>
+                    <p>
+                        Colaboración en el desarrollo de un portfolio web para una compañera, implementando herramientas
+                        de desarrollo y diseño web.
+                    </p>
+                    <div>
+                        <p><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png">HTML</p>
+                        <p><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg">CSS</p>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="abrirModal(5)">
+                <img src="WebAves1.png" alt="Proyecto 5">
+                <div class="info">
+                    <h2>Proyecto Ciencias Seres Vivos</h2>
+                    <p>
+                        Proyecto grupal de Ciencias sobre los seres vivos, implementando herramientas de desarrollo web
+                        para su exposición.
+                    </p>
+                    <div>
+                        <p><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png">HTML</p>
+                        <p><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg">CSS</p>
+                        <p><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/500px-JavaScript-logo.png">JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="abrirModal(6)">
+                <img src="WebLoad4.png" alt="Proyecto 6">
+                <div class="info">
+                    <h2>Página Web para Banda de Rock</h2>
+                    <p>
+                        Diseño moderno y atractivo para una banda de rock local.
+                    </p>
+                    <div>
+                        <p><img src="https://cdn-icons-png.flaticon.com/512/5968/5968753.png">Wix</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="proyecto" onclick="abrirModal(7)">
+                <img src="WebEA.png" alt="Proyecto 7">
+                <div class="info">
+                    <h2>Página Web para Gimnasio Local</h2>
+                    <p>Diseño moderno y atractivo con Landing, Planes de gimnasio, clases, contacto.</p>
+                    <div>
+                        <p><img src="https://cdn-icons-png.flaticon.com/512/5968/5968753.png">Wix</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Proyecto 1 -->
+    <div class="modal" id="modal-1">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(1)">&times;</span>
+            <h2>MacroFIT</h2>
+            <img src="WebMacroFIT.png" alt="Landing Page Moderna">
+            <p>Página Web sobre Fitness, Salud y Nutrición hecha con HTML, CSS, JavaScript y LocalStorage.</p>
+            <a href="https://joshu16.github.io/MacroFIT/" class="modal-btn" target="_blank">Visítala</a>
+        </div>
+    </div>
+
+    <!-- Modal Proyecto 2 -->
+    <div class="modal" id="modal-2">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(2)">&times;</span>
+            <h2>Juego Tic Tac Toe</h2>
+            <img src="WebTicTac.png" alt="Juego Web">
+            <p>Juego clásico de Tres en Línea con diseño retro, tipografía pixelada y animaciones. Desarrollado con
+                HTML, CSS y JavaScript. Incluye detección de ganador, empates y botón de reinicio. Visual atractivo y
+                centrado, ideal para divertirse o practicar programación.
+            </p>
+            <a href="https://joshu16.github.io/TicTacToe/" class="modal-btn" target="_blank">Visítala</a>
+        </div>
+    </div>
+
+    <!-- Modal Proyecto 3 -->
+    <div class="modal" id="modal-3">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(3)">&times;</span>
+            <h2>Proyecto de Inglés Web</h2>
+            <img src="WebENG1.png" alt="Página Banda de Rock">
+            <p>
+                Museo de deporte implementando herramientas de desarrollo web para su exposición. Incluye
+                información sobre el museo, sus exposiciones. Diseño moderno y atractivo, con
+                navegación intuitiva y fácil acceso a la información.
+            </p>
+            <a href="https://joshu16.github.io/ELF-PROJECT/" class="modal-btn" target="_blank">Visítala</a>
+        </div>
+    </div>
+
+    <!-- Modal Proyecto 4 -->
+    <div class="modal" id="modal-4">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(4)">&times;</span>
+            <h2>Colaboración En Portfolio</h2>
+            <img src="WebPau2.png" alt="">
+            <p>
+                Colaboración en el desarrollo de un portfolio web para una compañera, implementando herramientas de
+                desarrollo y diseño web. Incluye información sobre sus proyectos, habilidades y experiencia. Diseño
+                moderno y atractivo, con navegación intuitiva y fácil acceso a la información.
+            </p>
+            <a href="https://pauu2112.github.io/Portfolio/" class="modal-btn" target="_blank">Visítala</a>
+        </div>
+    </div>
+
+    <!-- Modal Proyecto 5 -->
+    <div class="modal" id="modal-5">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(5)">&times;</span>
+            <h2>Proyecto Ciencias Seres Vivos</h2>
+            <img src="WebAves2.png" alt="Página Banda de Rock">
+            <p>
+                Proyecto grupal de Ciencias sobre los seres vivos, implementando herramientas de desarrollo web para su
+                exposición. Incluye información sobre los seres vivos, sus características y hábitats. Diseño moderno y
+                atractivo, con navegación intuitiva y fácil acceso a la información. La seccióno de aves fue la parte
+                realizada por mi grupo y mi persona.
+            </p>
+            <a href="https://josuemarchenaquiros.github.io/publicacionProyecColabCienciasIIITrimestreDecimo/index.html"
+                class="modal-btn" target="_blank">Visítala</a>
+        </div>
+    </div>
+
+    <!-- Modal Proyecto 6 -->
+    <div class="modal" id="modal-6">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(6)">&times;</span>
+            <h2>Página Web para Banda de Rock</h2>
+            <img src="WebLoad4.png" alt="Página Banda de Rock">
+            <p>Sitio completo con sección de conciertos, biografía, galería y contacto. Estilo oscuro y animaciones
+                suaves.</p>
+            <a href="https://joshusbfe.wixsite.com/loud4" class="modal-btn" target="_blank">Visítala</a>
+        </div>
+    </div>
+
+    <!-- Modal Proyecto 7 -->
+    <div class="modal" id="modal-5">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(6)">&times;</span>
+            <h2>EA Wellness Fitness</h2>
+            <img src="WebEA.png" alt="Portfolio Creativo">
+            <p>Un portfolio lleno de personalidad y estilo. Animaciones únicas, paleta personalizada y minimalismo
+                visual.</p>
+            <a href="https://joshusbfe.wixsite.com/loud4" class="modal-btn" target="_blank">Visítala</a>
+        </div>
+    </div>
+
+    <!-- Modal Proyecto 8 -->
+    <div class="modal" id="modal-8">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal(8)">&times;</span>
+            <h2>Biografía de Lionel Messi</h2>
+            <img src="WebMessi2.png" alt="Landing Page Moderna">
+            <p></p>
+            <a href="https://joshu16.github.io/Messi-Biography/" class="modal-btn" target="_blank">Visítala</a>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="scriptModals.js"></script>
+
+</body>
+
+</html>
